@@ -14,30 +14,19 @@
             padding: 0;
             background-color: #fff;
             color: #000;
-            display: flex;
-            flex-wrap: wrap;
         }
         header {
             text-align: center;
             background-color: #fff;
             padding: 20px 0;
-            width: 100%;
         }
         header img {
             max-width: 200px;
             height: auto;
         }
-        .content {
-            flex: 1;
+        main {
+            text-align: center;
             padding: 20px;
-            box-sizing: border-box;
-        }
-        .image {
-            flex: 1;
-            background-image: url('IMG_8574.jpeg'); /* Replace with your image path */
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
         }
         .address, .email, .note, .subscribe {
             margin: 20px 0;
@@ -62,16 +51,9 @@
             padding: 10px 0;
             background-color: #fff;
             color: #000;
+            position: fixed;
+            bottom: 0;
             width: 100%;
-        }
-        @media (max-width: 768px) {
-            .image {
-                width: 100%;
-                height: 50vh;
-            }
-            body {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
@@ -79,8 +61,7 @@
     <header>
         <img src="Café_Tiergraten_Logo.png" alt="Café Tiergarten Logo">
     </header>
-    <div class="image"></div>
-    <div class="content">
+    <main>
         <div class="address">
             <p><strong>Café Tiergarten</strong></p>
             <p>Altonaer Straße 3, 10557 Berlin</p>
@@ -95,7 +76,7 @@
         <div class="note">
             <p><strong>Eröffnung Frühling 2025</strong></p>
         </div>
-    </div>
+    </main>
     <footer>
         <p>&copy; 2024 Café Tiergarten</p>
     </footer>
