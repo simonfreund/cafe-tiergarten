@@ -3,178 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Café Tiergarten – Eröffnung Herbst 2025 im Hansaviertel, Berlin. Perfekter Kaffee, exzellenter Geschmack und gemütliche Atmosphäre.">
-    <meta name="keywords" content="Café Tiergarten, guter Kaffee Berlin, Café Berlin Hansaviertel, Café Tiergarten Berlin, bester Kaffee Berlin, Café in der Nähe">
-    <meta name="author" content="Café Tiergarten Berlin">
     <title>Café Tiergarten Berlin</title>
-    <link rel="icon" href="cafe_tiergarten_favicon.png" type="image/x-icon">
-	<!-- Open Graph Meta Tags for Social Sharing -->
-    <meta property="og:title" content="Café Tiergarten Berlin">
-    <meta property="og:description" content="Perfekter Kaffee, exzellenter Geschmack und gemütliche Atmosphäre im Hansaviertel, Berlin.">
-    <meta property="og:image" content="https://cafetiergarten.berlin/Cafe_Tiergarten_Logo.png">
-    <meta property="og:url" content="https://cafetiergarten.berlin/">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Café Tiergarten Berlin">
-    <meta name="twitter:description" content="Perfekter Kaffee, exzellenter Geschmack und gemütliche Atmosphäre im Hansaviertel, Berlin.">
-    <meta name="twitter:image" content="https://cafetiergarten.berlin/Cafe_Tiergarten_Logo.png">
-
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            color: #000;
+            font-family: Arial, sans-serif;
         }
-        header {
+        .split-container {
+            display: flex;
+            height: 100vh;
+            flex-direction: row;
+        }
+        .left {
+            flex: 1;
+            background: url('Cafe_Tiergarten_Logo.png') no-repeat center center;
+            background-size: cover;
+        }
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
             text-align: center;
-            padding: 20px 0;
         }
-        header img {
-            max-width: 200px;
-            height: auto;
-        }
-        main {
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .address, .email {
+        .right .address, .right .email {
             margin: 20px 0;
-            font-size: 1em;
-        }
-
-        .subscribe {
-            padding-top: 20px;
-        }
-        
-        a {
-            text-decoration: none;
-            color: #000;
-        }
-        .subscribe a {
-            display: inline-block;
-            background-color: #000;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 50px;
-        }
-        .subscribe a:hover {
-            background-color: #fff;
-            color: #000;
         }
         footer {
             text-align: center;
-            color: #000;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+            padding: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
         }
 
-
-#mc_embed_signup div.mce_inline_error {
-    	padding: 5px 10px;
-	background-color: #fff;
-	font-weight: normal;
-	color: red;
-}
-
-
-#startnext-widget-container {
-    width: 100%;
-    max-width: 400px; /* Adjust width as needed */
-    margin: 20px auto;
-    overflow: hidden; /* Prevents content from spilling over */
-}
-
-
-
-	    
+        /* Responsive: stacked layout on small screens */
+        @media (max-width: 768px) {
+            .split-container {
+                flex-direction: column;
+            }
+            .left {
+                height: 50vh;
+                width: 100%;
+            }
+            .right {
+                height: auto;
+                width: 100%;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <a href="/"><img src="Cafe_Tiergarten_Logo.png" alt="Café Tiergarten Logo"></a>
-    </header>
-    <main>
+
+<div class="split-container">
+    <div class="left"></div>
+    <div class="right">
         <div class="address">
             <p>Café Tiergarten<br>
-                Altonaer Straße 3<br>
-                10557 Berlin</p>
+            Altonaer Straße 3<br>
+            10557 Berlin</p>
         </div>
         <div class="email">
             <a href="mailto:mail@cafetiergarten.berlin">mail@cafetiergarten.berlin</a>
         </div>
 
-	<div>
-            <p>—</p>
-        </div>
-
-
-
-        	<!-- Begin Mailchimp Signup Form 
-<link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css"> -->
-<style type="text/css">
-	#mc_embed_signup{margin: 0 auto; background:#fff; clear:left; width: 100vw; max-width: 444px;}
-	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">			
-    <form action="https://berlin.us14.list-manage.com/subscribe/post?u=4adaf11956d80a0b9e3601556&amp;id=e47d239a2b&amp;f_id=0094c2e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-        <p></p>
-        
-<div class="mc-field-group">
-	<label for="mce-EMAIL">Trage Dich hier ein und erfahre als Erstes, wann wir eröffnen:
-</label>
-	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-	<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-</div>
-	<div id="mce-responses" class="clear foot">
-		<div class="response" id="mce-error-response" style="display:none"></div>
-		<div class="response" id="mce-success-response" style="display:none"></div>
-	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_91687179945903a0f6e7304ff_67453e313c" tabindex="-1" value=""></div>
-        <div class="optionalParent">
-            <div class="clear foot">
-                <input type="submit" value="eintragen" name="subscribe" id="mc-embedded-subscribe" class="button">
-          
-            </div>
+        <div id="mc_embed_signup">
+            <form action="https://berlin.us14.list-manage.com/subscribe/post?u=4adaf11956d80a0b9e3601556&amp;id=e47d239a2b&amp;f_id=0094c2e1f0" method="post" target="_blank" novalidate>
+                <label for="mce-EMAIL">Trage Dich hier ein und erfahre als Erstes, wann wir eröffnen:</label><br>
+                <input type="email" name="EMAIL" id="mce-EMAIL" required>
+                <input type="submit" value="eintragen">
+            </form>
         </div>
     </div>
-</form>
 </div>
 
-	    
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
+<footer>
+    <p>Unsere aktuellen Öffnungszeiten sind:</p>
+    <ul>
+        <li>Montag: geschlossen</li>
+        <li>Dienstag: geschlossen</li>
+        <li>Mittwoch: 10–18:00</li>
+        <li>Donnerstag: 10–18:00</li>
+        <li>Freitag: 10–21:00</li>
+        <li>Samstag: 10–21:00</li>
+        <li>Sonntag: 10–18:00</li>
+    </ul>
+</footer>
 
-<!--
-        
-        <div class="subscribe">
-            <p>Für Neuigkeiten rund um das Café, trage Dich hier in unseren Email Verteiler ein:</p>
-            <a href="http://eepurl.com/i5qIhU" target="_blank">eintragen</a>
-        </div>
--->
-	    
-    </main>
-    <footer>
-<p>Unsere aktuellen Öffnungszeiten sind:</p>
-<ul>
-  <li>Montag: geschlossen</li>
-  <li>Dienstag: geschlossen</li>
-  <li>Mittwoch: 10–18:00</li>
-  <li>Donnerstag: 10–18:00</li>
-  <li>Freitag: 10–21:00</li>
-  <li>Samstag: 10–21:00</li>
-  <li>Sonntag: 10–18:00</li>
-</ul>
-
-
-    </footer>
 </body>
 </html>
