@@ -1,104 +1,171 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Tiergarten Berlin</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .split-container {
-            display: flex;
-            height: 100vh;
-            flex-direction: row;
-        }
-        .left {
-            flex: 1;
-            background: url('Cafe_Tiergarten_Logo.png') no-repeat center center;
-            background-size: cover;
-        }
-        .right {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .right .address, .right .email {
-            margin: 20px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin: 5px 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Tiergarten Berlin</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        /* Responsive: stacked layout on small screens */
-        @media (max-width: 768px) {
-            .split-container {
-                flex-direction: column;
-            }
-            .left {
-                height: 50vh;
-                width: 100%;
-            }
-            .right {
-                height: auto;
-                width: 100%;
-                padding: 20px;
-            }
-        }
-    </style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .split-container {
+      display: flex;
+      height: 100vh;
+      flex-direction: row;
+    }
+
+    .left {
+      flex: 1;
+      background: url('Cafe_Tiergarten_Logo.png') no-repeat center center;
+      background-size: cover;
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .right .address,
+    .right .email {
+      margin: 20px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .opening-hours {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: center;
+      gap: 4px 20px;
+      font-family: monospace;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .opening-hours .day {
+      text-align: right;
+      min-width: 100px;
+      font-weight: bold;
+    }
+
+    .opening-hours .time {
+      text-align: left;
+      min-width: 80px;
+    }
+
+    #mc_embed_signup {
+      background: #fff;
+      clear: both;
+      width: 100%;
+      max-width: 400px;
+      margin: 30px auto 0;
+    }
+
+    #mc_embed_signup form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    #mc_embed_signup input[type="email"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #mc_embed_signup input[type="submit"] {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+
+    #mc_embed_signup input[type="submit"]:hover {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #000;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .split-container {
+        flex-direction: column;
+      }
+
+      .left {
+        height: 50vh;
+        width: 100%;
+      }
+
+      .right {
+        height: auto;
+        width: 100%;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="split-container">
+  <div class="split-container">
     <div class="left"></div>
     <div class="right">
-        <div class="address">
-            <p>Café Tiergarten<br>
-            Altonaer Straße 3<br>
-            10557 Berlin</p>
-        </div>
-        <div class="email">
-            <a href="mailto:mail@cafetiergarten.berlin">mail@cafetiergarten.berlin</a>
-        </div>
+      <div class="address">
+        <p>Café Tiergarten<br />
+          Altonaer Straße 3<br />
+          10557 Berlin</p>
+      </div>
 
-        <div id="mc_embed_signup">
-            <form action="https://berlin.us14.list-manage.com/subscribe/post?u=4adaf11956d80a0b9e3601556&amp;id=e47d239a2b&amp;f_id=0094c2e1f0" method="post" target="_blank" novalidate>
-                <label for="mce-EMAIL">Trage Dich hier ein und erfahre als Erstes, wann wir eröffnen:</label><br>
-                <input type="email" name="EMAIL" id="mce-EMAIL" required>
-                <input type="submit" value="eintragen">
-            </form>
-        </div>
+      <div class="email">
+        <a href="mailto:mail@cafetiergarten.berlin">mail@cafetiergarten.berlin</a>
+      </div>
+
+      <!-- Mailchimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="https://berlin.us14.list-manage.com/subscribe/post?u=4adaf11956d80a0b9e3601556&amp;id=e47d239a2b&amp;f_id=0094c2e1f0"
+          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+          novalidate>
+          <label for="mce-EMAIL">Trage Dich hier ein und erfahre als Erstes, wann wir eröffnen:</label>
+          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required placeholder="Deine E-Mail-Adresse">
+          <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_4adaf11956d80a0b9e3601556_e47d239a2b" tabindex="-1" value="">
+          </div>
+          <input type="submit" value="eintragen" name="subscribe" id="mc-embedded-subscribe" class="button">
+        </form>
+      </div>
     </div>
-</div>
+  </div>
 
-<footer>
+  <footer>
     <p>Unsere aktuellen Öffnungszeiten sind:</p>
-    <ul>
-        <li>Montag: geschlossen</li>
-        <li>Dienstag: geschlossen</li>
-        <li>Mittwoch: 10–18:00</li>
-        <li>Donnerstag: 10–18:00</li>
-        <li>Freitag: 10–21:00</li>
-        <li>Samstag: 10–21:00</li>
-        <li>Sonntag: 10–18:00</li>
-    </ul>
-</footer>
+    <div class="opening-hours">
+      <div class="day">Montag:</div><div class="time">geschlossen</div>
+      <div class="day">Dienstag:</div><div class="time">geschlossen</div>
+      <div class="day">Mittwoch:</div><div class="time">10–18:00</div>
+      <div class="day">Donnerstag:</div><div class="time">10–18:00</div>
+      <div class="day">Freitag:</div><div class="time">10–21:00</div>
+      <div class="day">Samstag:</div><div class="time">10–21:00</div>
+      <div class="day">Sonntag:</div><div class="time">10–18:00</div>
+    </div>
+  </footer>
 
 </body>
 </html>
